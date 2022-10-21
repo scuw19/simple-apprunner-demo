@@ -20,7 +20,7 @@ def health():
 def root():
     msg = "Hello from app runner! \n"
     for key, value in os.environ.items():
-        mst += "key is "+ key + " , value is " + value + "\n"
+        msg += "key is "+ key + " , value is " + value + "\n"
     if DEMO_ENV_VAR:
         msg += f" You set this environment variable: {DEMO_ENV_VAR}"
     return JSONResponse(status_code=status.HTTP_200_OK, content=msg)
