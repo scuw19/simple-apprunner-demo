@@ -3,6 +3,7 @@
 from fastapi import FastAPI, status
 from fastapi.responses import JSONResponse
 from os import getenv
+import os
 
 app = FastAPI(
     title="App Runner Demo Service",
