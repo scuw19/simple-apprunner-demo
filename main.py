@@ -19,9 +19,9 @@ def health():
 
 @app.get("/")
 def root():
-    msg = "Hello from app runner! \n"
+    msg = "Hello from app runner!\n" + os.linesep
     for key, value in os.environ.items():
-        msg += "key is "+ key + " , value is " + value + "\n"
+        msg += "key is "+ key + " , value is " + value + os.linesep
     if DEMO_ENV_VAR:
         msg += f" You set this environment variable: {DEMO_ENV_VAR}"
     return JSONResponse(status_code=status.HTTP_200_OK, content=msg)
